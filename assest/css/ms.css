@@ -2,9 +2,11 @@
 *::before {
     box-sizing: border-box;
 }
-
+*{
+    font-family: 'Montserrat', sans-serif;
+    }
 :root {
-    --cell-size: 100px;
+    --cell-size: 150px;
     --mark-size: calc(var(--cell-size) * 0.9);
 }
 
@@ -38,7 +40,7 @@ nav ul li {
 
 nav ul li a {
     line-height: 80px;
-    color: whitesmoke;
+    color: rgb(234, 0, 193);
     padding: 5px 20px;
     font-family: "Roboto", sans-serif;
     text-decoration: none;
@@ -47,8 +49,8 @@ nav ul li a {
 
 nav ul li a.active,
 nav ul li a:hover {
-    color: whitesmoke;
-    background: brown;
+    color: rgb(234, 0, 193);
+    background: rgb(87, 119, 202);
 }
 
 .board {
@@ -65,7 +67,7 @@ nav ul li a:hover {
 .cell {
     width: var(--cell-size);
     height: var(--cell-size);
-    border: 1px solid red;
+    border: 1px solid rgb(87, 119, 202);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,20 +102,22 @@ nav ul li a:hover {
 
 .cell.x::before,
 .cell.x::after {
-    background-color: red;
+    background-color:  rgb(234, 0, 193);
+    
 }
 
 .cell.circle::before {
-    background-color: whitesmoke;
+    background-color: rgb(87, 119, 202);
 }
 
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after {
-    background-color: #7f0000;
+    background-color:  rgb(218, 103, 198);
+   
 }
 
 .board.circle .cell:not(.x):not(.circle):hover::before {
-    background-color: #b2b2b2;
+    background-color: rgb(133, 153, 206);
 }
 
 .cell.x::before,
@@ -211,4 +215,34 @@ section::after {
     height: 100%;
     background: linear-gradient(#2196f3, #e91e63);
     clip-path: circle(20% at left 10%);
+}
+.buttons button {
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: rgb(87, 119, 202);
+    outline: none;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.buttons .btn {
+    margin-left: 25px;
+    float: right;
+}
+.buttons .btn2 {
+    margin-left: 25px;
+    float: right;
+}
+.buttons .btn3 {
+    margin-left: 25px;
+    float: right;
+}
+
+.buttons button:hover {
+    background: rgb(234, 0, 193);
+    float: right;
 }
